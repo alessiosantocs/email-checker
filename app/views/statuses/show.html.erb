@@ -1,0 +1,45 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<% if @result == true %>
+
+  <% random_message = ["Hell yeah!", "Just like that...", "Cmon baby", "Yay!!!1!", "yessssss", "...it exists!"].sample %>
+
+  <h1 class="text-center"><%= random_message %></h1>
+
+  <br>
+  <br>
+
+  <br>
+
+  <p class="alert alert-dismissable alert-success" style="max-width: 500px; margin: auto;">
+    The email address <i><%= @email_address %></i> was <strong>successfully reached!</strong>
+    It means it does exists...
+  </p>
+<% else %>
+
+  <% random_message = ["Holy sh*t", "Nay :(", "Yikes!", "Grrrrr...", "Damn!", "Nope."].sample %>
+
+  <h1 class="text-center"><%= random_message %></h1>
+
+  <br>
+  <br>
+
+  <br>
+
+  <p class="alert alert-dismissable alert-danger" style="max-width: 500px; margin: auto;">
+    The email address <i><%= @email_address %></i> is <strong>probably a fake one!</strong>
+    It means it does NOT exists...
+  </p>
+<% end %>
+
+<br>
+
+<p class="lead text-center" style="max-width: 500px; margin: auto;">
+  <a href="/" class="alert-link">Go check another <i class="glyphicon glyphicon-plus"></i></a>
+</p>

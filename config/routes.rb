@@ -1,3 +1,5 @@
 EmailChecker::Application.routes.draw do
-  resources :status
+  resources :statuses
+
+  root :to => 'statuses#new'
 end
